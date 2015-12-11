@@ -19,10 +19,10 @@
 
 ## What is VanGo? <a name="what"></a>
 
-VanGo is a custom scheduling system for the Allegheny Shuttle Van Service.  It integrates with several well-known Google products to provide an automatic, light-weight solution for scheduling students in an organized way.  It further provides two distinct forms of output: a Google Calendar that allows one to view the unique schedule for each week of the year, and an easily printable Google Doc that provides a more thorough look at the current week.  This ReadMe will discuss the whole scheduling process used by VanGo, and a few instructions for easily maintaining the schedule for long-term use.
+VanGo is a custom scheduling system for the Allegheny Shuttle Van Service.  It integrates with several well-known Google products to provide an automatic, light-weight solution for scheduling students in an organized way.  It further provides two distinct forms of output: a Google Calendar that allows one to view the unique schedule for each week of the year, and an easily printable Google Doc that provides a more clear look at the current week.  This ReadMe will discuss the entire scheduling process used by VanGo, and the few instructions you'll need to easily maintain the schedule for long-term use.
 
 ## The VanGo Process <a name="process"></a>
-VanGo continues to utilize Google Forms and Google Sheets for user input, but then uses this information to produce both a Google Calendar and Google Doc with scheduling information.
+VanGo continues to use Google Forms and Google Sheets to retrieve and store scheduling requests from students.  It then uses this information to produce both a Google Calendar and Google Doc to reflect these requests.
 
 ### The Google Form (ShuttleVanForm) <a name="form"></a>
 The newly created Google Form, currently called ShuttleVanForm, can be found at the following URL: https://docs.google.com/a/allegheny.edu/forms/d/1aTNVBvwU8JhAF5eqtEkrBQfcxoUCxXZFkYVp3ptMz30/viewform.
@@ -35,7 +35,7 @@ Google Forms provide an easy and customizable means of collecting information fr
 	
 2.  *__Start Date and End Date__*
 
-	The previous form only permitted the student to enter their desired start date.  We expanded this by requiring the student to enter their end date as well.  This allows VanGo to create dynamic, weekly schedules, instead of broad semester schedules.  Each week can now reflect new students beginning the shuttle service and existing students leaving the service.  This should further allow drivers to be confident that the schedule for a given week is accurate, as it should no longer include students who have not specifically requested the shuttle for that particular week.  
+	The previous form only permitted the student to enter their desired start date.  This was expanded by requiring the student to enter their desired end date as well.  This allows VanGo to create dynamic, weekly schedules, instead of broad semester schedules.  Each week can now reflect new students beginning the shuttle service and existing students leaving the service at any time.  This should further allow drivers to be confident that the schedule for a given week is accurate, as it should no longer include students who have not specifically requested the shuttle for that particular week.  
 
 3.  *__15 Minute Time Intervals__*
 	
@@ -43,12 +43,12 @@ Google Forms provide an easy and customizable means of collecting information fr
 
 4.  *__Other Minor Changes__*
 	
-	Additionally, the "Name" box has been divided into "First Name" and "Last Name" boxes.  Previous form submissions revealed that students would occasionally omit their last name from the field when only one box was provided; this should hopefully address that rare problem.  Additionally, data validation was added to the "Phone Number" box in order to comply with a specific format.  This was done to help standardize the input and ensure that all information is entered as desired.
+	Additionally, the "Name" field has been divided into "First Name" and "Last Name" fields.  Previous form submissions revealed that students would occasionally omit their last name from the field when only one box was provided; this should hopefully address that rare problem.  Additionally, data validation was added to the "Phone Number" field in order to comply with a specific format.  This was done to help standardize the input and ensure that all information is entered as intended.
 	
 ### The Google Sheet (Form_Responses) <a name="sheet"></a>
 The newly created Google Sheet, currently called Form_Responses, can be found at the following URL: https://docs.google.com/spreadsheets/d/1qjh1UbBCpMU0obs-D6CP6WFEYRkZBZ7GXn-jp6SUeus/edit#gid=1266965723.
 
-Once the student submits the ShuttleVanForm, the information from that form automatically populates a row in the Form_Responses Google Sheet.  VanGo has been implemented as a script that has been integrated directly into this Google Sheet: it will activate automatically when the sheet updates with new values.  The contents of this sheet should typically not be altered directly.  See the Tutorial section for instructions on how to access the VanGo script and perform some maintenance options if needed (e.g. removing specific students from the calendar, deleting large volumes of events, etc).
+Once the student submits the ShuttleVanForm, the information from that form automatically populates a row in the Form_Responses Google Sheet.  VanGo has been implemented as a script that has been integrated directly into this Google Sheet: it will activate automatically when the sheet updates with new values.  The contents of this sheet should typically not be altered directly.  See the [Tutorial](#tutorial) section for instructions on how to access the VanGo script and perform some maintenance options if needed (e.g. removing specific students from the calendar, deleting large volumes of events, etc).
 
 ### The Google Calendar (ShuttleVanCalendar) <a name="calendar"></a>
 The Google Calendar, currently called ShuttleVanCalendar, can be found at the following URL: https://www.google.com/calendar/embed?src=allegheny.edu_93fhcf7oq8i7771q4ehm76k814%40group.calendar.google.com&ctz=America/New_York.
@@ -66,7 +66,7 @@ Sample output from the ShuttleVanCalendar (event details)
 ### The Google Doc (ShuttleVanTable) <a name="table"></a>
 The Google Doc, currently called ShuttleVanTable, can be found at the following URL: https://docs.google.com/document/d/1CKWk5bT8n5h2-Dx__9LANFMpvFUUIalmx06inaGC7xk/.
 
-While the ShuttleVanCalendar allows great granularity for scheduling students at different times and viewing the overall schedule for any desired week, it suffers from having a poor print quality.  The default print settings offered by Google Calendar do not display all of the details for the calendar events, and much of the important information is lost.  In order to resolve this issue, and allow for a suitable schedule that can be printed, VanGo additionally creates the ShuttleVanTable.  Currently, VanGo is scheduled to update this ShuttleVanTable every night at midnight automatically.  It will gather information from the ShuttleVanCalendar for just the current week (Monday through Friday), and create a table the displays all of the scheduled events for the week.  The table is divided into rows that display the 15 minute intervals from 7:30AM to 5:45PM, and further has five columns for Monday through Friday.  In order to keep the table legible and succinct, only the most important features of each event are included in the output: the type of event (pick-up or drop-off), the student's name, and the work site.  This table can then be easily printed and distributed to drivers, particularly if they do not have access to the online ShuttleVanCalendar.
+While the ShuttleVanCalendar allows great granularity for scheduling students at different times and viewing the overall schedule for any desired week, it suffers from having poor print quality.  The default print settings offered by Google Calendar do not display all of the details for the calendar events, and much of the important information is lost.  In order to resolve this issue, and allow for a suitable schedule that can be printed, VanGo additionally creates the ShuttleVanTable.  Currently, VanGo is scheduled to update this ShuttleVanTable every night at midnight automatically.  It will gather information from the ShuttleVanCalendar for just the current week (Monday through Friday), and create a table the displays all of the scheduled events for the week.  The table is divided into rows that display the 15 minute intervals from 7:30AM to 5:45PM, and further has five columns for Monday through Friday.  In order to keep the table legible and succinct, only the most important features of each event are included in the output: the type of event (pick-up or drop-off), the student's name, and the work site.  This table can then be easily printed and distributed to drivers, particularly if they do not have access to the online ShuttleVanCalendar.
 
 ![Sample ShuttleVanTable Output](documents/images/SampleTable.png)
 Sample output from the ShuttleVanTable (only morning schedule displayed)
@@ -75,7 +75,7 @@ Sample output from the ShuttleVanTable (only morning schedule displayed)
 In most cases, VanGo should not require any input from the user.  It should operate automatically, producing both the ShuttleVanCalendar and ShuttleVanTable as output.  However, certain features have been added to VanGo to allow the user additional manual control over the scheduling process.
 
 ### Access and Edit VanGoScript <a name="access"></a>
-This section shows how to open the VanGoScript and activate the features, which are detailed in the following section.  Also see the embedded GIF for a quick demonstration.
+This section shows how to open the VanGoScript and activate the available features, which are detailed in the following section.  Also see the embedded GIF for a quick demonstration.
 
 1.  Go to the [Form_Responses Google Sheet](https://docs.google.com/spreadsheets/d/1qjh1UbBCpMU0obs-D6CP6WFEYRkZBZ7GXn-jp6SUeus/edit#gid=1266965723).
 2.  Click on the `Tools` menu button and select `Script editor..`
@@ -145,7 +145,7 @@ This function forces the ShuttleVanTable Google Doc to update.  Normally the tab
 
 1.  *__Real-time, automatic scheduling__*
 	
-	The VanGo system works without the need for user input.  Students submit their ShuttleVanForm online, and VanGo takes care of the rest.
+	The VanGo system works without the need for user input.  Students submit their ShuttleVanForm online, and VanGo takes care of the rest.  It will further automatically send students notifications about their upcoming scheduled events, helping to ensure that no one misses their ride.
 	
 2.  *__Extremely light-weight system__*
 	
@@ -170,9 +170,14 @@ This function forces the ShuttleVanTable Google Doc to update.  Normally the tab
 Ultimately, we are confident that VanGo can be used to help the Allegheny Shuttle Van Service manage its schedule in an organized and efficient way.  Furthermore, if chosen for this purpose, we would continue to offer additional features, maintenance, and support to ensure the longevity of this product.
 
 ## Contributors <a name="contributors"></a>
-Michael Camara [michaeljcamara](github.com/michaeljcamara)
+Michael Camara [michaeljcamara](https://github.com/michaeljcamara)
+
 Herbie Torrance
-Cathal Chaffee 
-Victor Zheng [victorhz](github.com/victorhz)
-Alex Means [meansa](github.com/meansa)
-Francis Craft [craftfrancis](github.com/craftfrancis)
+
+Cathal Chaffee
+ 
+Victor Zheng [victorhz](https://github.com/victorhz)
+
+Alex Means [meansa](https://github.com/meansa)
+
+Francis Craft [craftfrancis](https://github.com/craftfrancis)
