@@ -172,9 +172,9 @@ Ultimately, we are confident that VanGo can be used to help the Allegheny Shuttl
 ## Contributors <a name="contributors"></a>
 Michael Camara [michaeljcamara](https://github.com/michaeljcamara)
 
-Herbie Torrance
+Herbie Torrance [htorrance](https://github.com/htorrance)
 
-Cathal Chaffee
+Cathal Chaffee [cathalchaffee](https://github.com/cathalchaffee)
  
 Victor Zheng [victorhz](https://github.com/victorhz)
 
