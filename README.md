@@ -9,8 +9,8 @@
 	- [The Google Doc](#table)
 + [Tutorial](#tutorial)
 	- [Access and Edit VanGoScript](#access)
-	- [deleteAllEvents Function)(#deleteallevents)
-	- [removeStudentFromEvents Function)(#removestudentfromevents)
+	- [deleteAllEvents Function](#deleteallevents)
+	- [removeStudentFromEvents Function](#removestudentfromevents)
 	- [addStudentToEvent Function](#addstudenttoevent)
 	- [clearScheduleTable Function](#clearscheduletable)
 	- [updateScheduleTable Function](#updatescheduletable)
@@ -57,10 +57,10 @@ Once the ShuttleVanForm is submitted, the information automatically enters into 
 
 Finally, if an event exists for the time slot with six student guests already scheduled, then the current student *will not* be added to that event.  This restriction was implemented due to the six seat limitation of the Allegheny shuttle van, and the first-come first-serve nature of the service.  Instead of arbitrarily choosing a different time to schedule the student, VanGo will instead automatically send an email to the student indicating him/her of this conflict.  The email displays the conflicting time (or times), and then provides a link that the student can follow back to their saved form submission.  They can then open their form (which retains all of the previously entered information), choose a new 15 minute time slot that works for them, and resubmit it.  This entire process should happen within just a few minutes of the form submission, so the student will receive a very quick indication of this conflict and have ample time to select a time that works for both him/her and the shuttle service.  Contact information for Mr. Scandinaro is further provided in the email, in case the student requires any special accommodation.
 
-![Sample Calendar Output (Weekly)](CalendarOverview.png)
+![Sample Calendar Output (Weekly)](documents/images/CalendarOverview.png)
 Sample output from the ShuttleVanCalendar (weekly view)
 
-![Sample Calendar Output (Event Details)](CalendarDetailed.png)
+![Sample Calendar Output (Event Details)](documents/images/CalendarDetailed.png)
 Sample output from the ShuttleVanCalendar (event details)
 
 ### The Google Doc (ShuttleVanTable) <a name="table"></a>
@@ -68,7 +68,7 @@ The Google Doc, currently called ShuttleVanTable, can be found at the following 
 
 While the ShuttleVanCalendar allows great granularity for scheduling students at different times and viewing the overall schedule for any desired week, it suffers from having a poor print quality.  The default print settings offered by Google Calendar do not display all of the details for the calendar events, and much of the important information is lost.  In order to resolve this issue, and allow for a suitable schedule that can be printed, VanGo additionally creates the ShuttleVanTable.  Currently, VanGo is scheduled to update this ShuttleVanTable every night at midnight automatically.  It will gather information from the ShuttleVanCalendar for just the current week (Monday through Friday), and create a table the displays all of the scheduled events for the week.  The table is divided into rows that display the 15 minute intervals from 7:30AM to 5:45PM, and further has five columns for Monday through Friday.  In order to keep the table legible and succinct, only the most important features of each event are included in the output: the type of event (pick-up or drop-off), the student's name, and the work site.  This table can then be easily printed and distributed to drivers, particularly if they do not have access to the online ShuttleVanCalendar.
 
-![Sample ShuttleVanTable Output](SampleTable.png)
+![Sample ShuttleVanTable Output](documents/images/SampleTable.png)
 Sample output from the ShuttleVanTable (only morning schedule displayed)
 
 ## Tutorial <a name="tutorial"></a>
@@ -85,7 +85,7 @@ This section shows how to open the VanGoScript and activate the features, which 
 6.  A pop-up will appear with "Running function <name_here>...", which will disappear once the operation finishes.
 7.  If a pop-up requests permission to use the services provided by Google, click `Allow`.
 
-![Tutorial Gif](TutorialGif.gif)
+![Tutorial Gif](documents/images/TutorialGif.gif)
 Visual demonstration of above steps for opening and editing VanGoScript
 
 ### deleteAllEvents Function <a name="deleteallevents"></a>
@@ -143,27 +143,27 @@ This function forces the ShuttleVanTable Google Doc to update.  Normally the tab
 
 ## Why Choose VanGo? <a name="why"></a>
 
-1.  Real-time, automatic scheduling
+1.  *__Real-time, automatic scheduling__*
 	
 	The VanGo system works without the need for user input.  Students submit their ShuttleVanForm online, and VanGo takes care of the rest.
 	
-2.  Extremely light-weight system
+2.  *__Extremely light-weight system__*
 	
 	Once you have access to the 4 VanGo Google files (the form, sheet, calendar, and doc), then you're all set.  There are no complicated installers you need to use or additional external files to download.  Just provide students with the link to the form and you can immediately start using VanGo.
 	
-3.  Automatic conflict resolution
+3.  *__Automatic conflict resolution__*
 
 	VanGo helps prevent many conflicts through the modified ShuttleVanForm, and further helps resolve scheduling conflicts by automatically emailing affected students.
 	
-4.  Familiarity of Google
+4.  *__Familiarity of Google__*
 	
 	The Google line of products are ubiquitous and easy to understand for both Allegheny staff and students alike.
 	
-5.  Two sources of output
+5.  *__Two sources of output__*
 	
 	The VanScheduleCalendar allows the user to look at the schedule for any day and any week of the year, while also providing detailed student information in every scheduled event.  Additionally, the VanScheduleTable gives the user a high-quality, printable weekly schedule that can easily be distributed to drivers or other affected parties.
 	
-6.  Maintain ability to edit the schedule, if needed
+6.  *__Maintain ability to edit the schedule, if needed__*
 
 	Although VanGo should not require regular input from the user, it still provides a number of utility functions to allow the user to edit the schedule, if needed.
 
