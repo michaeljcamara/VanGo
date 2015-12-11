@@ -161,7 +161,7 @@ This function forces the ShuttleVanTable Google Doc to update.  Normally the tab
 	
 5.  *__Two sources of output__*
 	
-	The VanScheduleCalendar allows the user to look at the schedule for any day and any week of the year, while also providing detailed student information in every scheduled event.  Additionally, the VanScheduleTable gives the user a high-quality, printable weekly schedule that can easily be distributed to drivers or other affected parties.
+	The ShuttleVanCalendar allows the user to look at the schedule for any day and any week of the year, while also providing detailed student information in every scheduled event.  Additionally, the ShuttleVanTable gives the user a high-quality, printable weekly schedule that can easily be distributed to drivers or other involved parties.
 	
 6.  *__Maintain ability to edit the schedule, if needed__*
 
