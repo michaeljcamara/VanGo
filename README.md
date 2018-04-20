@@ -1,4 +1,4 @@
-#VanGo README
+# VanGo README
 
 ## Table of Contents
 + [What is VanGo?](#what)
@@ -170,14 +170,14 @@ This function forces the ShuttleVanTable Google Doc to update.  Normally the tab
 Ultimately, we are confident that VanGo can be used to help the Allegheny Shuttle Van Service manage its schedule in an organized and efficient way.  Furthermore, if chosen for this purpose, we would continue to offer additional features, maintenance, and support to ensure the longevity of this product.
 
 ## Contributors <a name="contributors"></a>
-Michael Camara [michaeljcamara](https://github.com/michaeljcamara)
+Michael Camara [michaeljcamara](https://github.com/michaeljcamara). Coding, documentation, team leader.
 
-Herbie Torrance [htorrance](https://github.com/htorrance)
+Herbie Torrance [htorrance](https://github.com/htorrance).  Testing.
 
-Cathal Chaffee [cathalchaffee](https://github.com/cathalchaffee)
+Cathal Chaffee [cathalchaffee](https://github.com/cathalchaffee).  Coding (tableSchedule.gs).
  
-Victor Zheng [victorhz](https://github.com/victorhz)
+Victor Zheng [victorhz](https://github.com/victorhz).  Coding (util.gs).
 
-Alex Means [meansa](https://github.com/meansa)
+Alex Means [meansa](https://github.com/meansa).  Analytics.
 
-Francis Craft [craftfrancis](https://github.com/craftfrancis)
+Francis Craft [craftfrancis](https://github.com/craftfrancis).  Analytics.
